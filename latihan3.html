@@ -1,0 +1,110 @@
+var data_mentah = {
+"Kopi": [
+{
+"nama": "capuchino",
+"foto": "images/produk/product_capuchino.jpg",
+"size": "120 gram",
+"harga": "58000",
+"link": "http://www.google.com"
+},
+{
+"nama": "espresso",
+"foto": "images/produk/product_espresso.jpg",
+"size": "120 gram",
+"harga": "30000",
+"link": "http://www.google.com"
+},
+{
+"nama": "latte",
+"foto": "images/produk/product_latte.jpg",
+"size": "150 gram",
+"harga": "43000",
+"link": "http://www.google.com"
+},
+{
+"nama": "kopi susu",
+"foto": "images/produk/product_kopi_susu.jpg",
+"size": "100 gram",
+"harga": "18000",
+"link": "http://www.google.com"
+}
+],
+"Teh": [
+{
+"nama": "Es teh manis",
+"foto":
+"https://asset.kompas.com/crops/vX_ULbw0h4h-CclfUmCXhfjxwTU=/0x0:880x587/750x500/data/photo/2023/08/16/64dc53ca9f3db.jpg",
+"size": "100 gram",
+"harga": "18000",
+"link": "http://www.google.com"
+}
+],
+"Makanan": [
+{
+"nama": "Gorengan",
+"foto": "https://media.sukabumiupdate.com/media/2023/01/20/1674217900_63ca89ac0f895_Ck15X6rBGVyRcdxXu9YC.jpg"
+"size": "100 gram",
+"harga": "18000",
+"link": "http://www.google.com"
+}
+]
+
+}
+
+console.log("Isi Data mentah:", data_mentah)
+
+function updateSelect() {
+select_produk.innerHTML = '<option selected disabled>-</option>'
+
+Object.keys(data_mentah).forEach(kategori => {
+select_produk.innerHTML += '<option value="'+kategori+'">'+kategori+'</option>'
+})
+console.log("Select berhasil Diganti")
+}
+updateSelect()
+
+var data_kopi = []
+
+select_produk.onchange = function () {
+var pilihan = select_produk.value
+console.log("Isi Pilihannya :", pilihan)
+
+data_kopi = data_mentah[pilihan]
+console.log("Isi Data yang dipilih :", data_kopi)
+updateTampilan()
+}
+
+baris_produk.innerHTML = ''
+function updateTampilan() {
+baris_produk.innerHTML = ''
+data_kopi.forEach(kopi => {
+baris_produk.innerHTML += `
+<div class="col mb-4">
+    <div class="card">
+        <img src="${kopi.foto}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${kopi.nama}</h5>
+            <div class="row hargasize my-4">
+                <div class="col">
+                    <i class="bi bi-cup-hot"></i> ${kopi.size}
+                </div>
+
+                <div class="col fw-bold text-primary">
+                    ${kopi.harga}
+                </div>
+            </div>
+            <a target="_blank" href="${kopi.link}" class="btn btn-primary w-100"><i class="bi bi-cart2"></i> Beli</a>
+        </div>
+    </div>
+</div>`
+})
+
+}
+
+var sumber = "https://rikikurnia.com/prakerja/api/kopi"
+var sumber2 = "data.json"
+
+$.getJSON(sumber2).then(data => {
+data_mentah = data
+updateSelect()
+})

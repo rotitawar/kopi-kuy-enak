@@ -1,0 +1,77 @@
+{
+    "arabica": [
+        {
+            "foto": "images/produk/product_capuchino.jpg",
+            "nama": "Cappuccino Arabica",
+            "size": "500 Gram",
+            "harga": "200.000",
+            "link": "https://www.google.com/search?q=cappuccino+arabica&tbm=shop"
+        },
+        {
+            "foto": "images/produk/product_espresso.jpg",
+            "nama": "Pahit Arabica",
+            "size": "100 Gram",
+            "harga": "100.000",
+            "link": "https://www.google.com/search?q=pahit+arabica&tbm=shop"
+        },
+        {
+            "foto": "images/produk/product_latte.jpg",
+            "nama": "Latte Arabica",
+            "size": "150 Gram",
+            "harga": "150.000",
+            "link": "https://www.google.com/search?q=latte+arabica&tbm=shop"
+        }
+    ],
+    "robusta": [
+        {
+            "foto": "images/produk/product_kopi_susu.jpg",
+            "nama": "Kopsus Robusta",
+            "size": "100 Gram",
+            "harga": "500.000",
+            "link": "https://www.google.com/search?q=kopi+susu+robusta&tbm=shop"
+        },
+        {
+            "foto": "images/produk/product_latte.jpg",
+            "nama": "Latte Robusta",
+            "size": "150 Gram",
+            "harga": "150.000",
+            "link": "https://www.google.com/search?q=latte+robusta&tbm=shop"
+        }
+    ]
+},
+{
+    "Kopi": [
+        {
+            "foto": "https://img.freepik.com/free-photo/delicious-quality-coffee-cup_23-2150691369.jpg",
+            "nama": "Cappuccino",
+            "harga": "25.000",
+            "size": "150 ml",
+            "link": "#"
+        },
+        {
+            "foto": "images/produk/product_espresso.jpg",
+            "nama": "Espresso",
+            "harga": "15.000",
+            "size": "100 ml",
+            "link": "#"
+        }
+    ],
+    "Teh": [
+        {
+            "foto": "https://dcostseafood.id/wp-content/uploads/2021/12/Teh-tawar-manis.jpg",
+            "nama": "Teh Tawar Manis",
+            "harga": "5.000",
+            "size": "100 ml",
+            "link": "#"
+        }
+    ],
+    "Makanan": [
+        {
+            "foto": "https://img-global.cpcdn.com/recipes/f3d4726746ab80f2/1200x630cq70/photo.jpg",
+            "nama": "Donat Mix",
+            "harga": "25.000",
+            "size": "12 Pcs",
+            "link": "#"
+        }
+    ]
+}
